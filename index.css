@@ -1,0 +1,187 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.maincontainer {
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	background-color: #3d087b;
+	column-gap: 10px;
+}
+.container1 {
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+}
+.container2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	row-gap: 10px;
+	width: 536px;
+}
+.rowl1 {
+	height: 77px;
+}
+.rowl2 {
+	background-color: #ffffff;
+	height: 363px;
+	border: 1px #ededed;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	color: #3d087b;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+.rowl3 {
+	height: 77px;
+	border: 1px #ededed;
+	border-radius: 10px;
+	color: #ffffff;
+	background-color: blueviolet;
+	text-align: left;
+	font: normal normal 900 27px/34px Bauhaus Hv BT;
+	padding: 20px;
+}
+.rowl4 {
+	display: flex;
+	justify-content: space-between;
+	column-gap: 10px;
+}
+.sub1 {
+	border-radius: 4px;
+	height: 50px;
+	color: #ffffff;
+	background-image: linear-gradient(
+		113deg,
+		#6e54ec 0%,
+		#cb52f8 40%,
+		#fc5eff 81%,
+		#f1a7c5 100%
+	);
+	width: 299px;
+	text-align: center;
+	padding-top: 6px;
+	font: normal normal 600 24px/38px Manrope;
+}
+.sub1 .hoversub1 {
+	display: none;
+}
+.sub1:hover .defaultsub1 {
+	display: none;
+}
+.sub1:hover .hoversub1 {
+	display: inline;
+}
+ul {
+	list-style-type: none;
+}
+.sub2 {
+	background-color: blueviolet;
+
+	color: #f25cfe;
+	border-radius: 10px;
+	height: 117px;
+	font: normal normal bold 15px/25px Manrope;
+	padding: 10px;
+}
+.card {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+}
+select {
+	border-radius: 4px;
+	border: 1px solid #ededed;
+	height: 45px;
+	width: 281px;
+	text-align: center;
+	color: #3d087bde;
+	font: normal normal normal 14px Manrope;
+}
+.rowr1 {
+	position: relative;
+	margin-bottom: 150px;
+}
+.rowr1 > div {
+	position: absolute;
+	background-color: #ffffff;
+	border-radius: 10px;
+	border: 1px solid #ededed;
+}
+.cardz10 {
+	z-index: 10;
+	width: 536px;
+	height: 130px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #3d087b;
+	gap: 10px;
+	text-align: left;
+	font: normal normal 600 20px/32px Manrope;
+}
+.cardz5 {
+	left: 60px;
+	z-index: 5;
+	width: 416px;
+	height: 140px;
+	opacity: 0.71;
+}
+.cardz3 {
+	z-index: 3;
+	left: 80px;
+	width: 379px;
+	height: 150px;
+	opacity: 0.22;
+}
+.rowr2 {
+	height: 118px;
+	border: 1px solid #ededed;
+	border-radius: 10px;
+	color: #8e53f0;
+	background-color: #ffffff;
+	text-align: left;
+	font: normal normal 900 27px/34px Bauhaus Hv BT;
+	padding: 40px 10px;
+}
+.rowr3 {
+	background-image: url('./Component\ 30\ –\ 1.svg');
+	height: 341px;
+}
+.cardz10 > div {
+	width: 82px;
+	height: 90px;
+	font: normal normal normal 32px Barlow;
+	text-align: center;
+	padding-top: 10px;
+}
+.img1 {
+	background-image: url('./timeline.svg');
+	color: #8a11bf;
+}
+.img2 {
+	background-image: url('./timeline.svg');
+	color: #8a11bf;
+}
+.img3 {
+	background-image: url('./timeline.svg');
+	color: #8a11bf;
+}
+.img4 {
+	background-image: url('./AM_svg.svg');
+	color: #ffffff;
+}
+
+/* ***** Media Queries ****** */
+@media screen and (max-width: 360px) {
+	.maincontainer {
+		flex-direction: column;
+	}
+}
