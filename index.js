@@ -17,7 +17,7 @@ function time() {
  		time();
 	}, 1000);
 }
-//time();
+time();
 
 function setTime(hrs, mins, secs, ampm) {
 	let hours = document.querySelector('.img1');
