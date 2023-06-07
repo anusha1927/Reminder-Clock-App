@@ -151,7 +151,8 @@ select {
 	font: normal normal 900 27px/34px Bauhaus Hv BT;
 	padding: 40px 10px;
 }
-.rowr3 {
+.rowr3,
+.img {
 	/* background-image: url('./Component\ 30\ –\ 1.svg'); */
 	height: 341px;
 }
@@ -180,7 +181,7 @@ select {
 }
 
 /* ***** Media Queries ****** */
-@media screen and (max-width: 360px) {
+@media screen and (min-width: 360px) and (max-width: 600px) {
 	.maincontainer {
 		flex-direction: column;
 		justify-content: flex-start;
@@ -198,6 +199,8 @@ select {
 	.rowl2 {
 		width: 80%;
 		height: 200px;
+		position:relative;
+		top:277px;
 	}
 	select {
 		width: 180px;
@@ -206,10 +209,22 @@ select {
 	.rowl3,
 	.rowr2 {
 		font-size: 20px;
+		position: relative;
+		top: 550px;
 	}
 	.rowl4 {
-		flex-direction: column;
-		gap: 15px;
+		/* flex-direction: column; */
+		/* gap: 15px; */
+		position: relative;
+		top: 590px;
+		width: 84%;
+	}
+	.sub1{
+		width: 40%;
+	}
+	.sub2{
+		width: 60%;
+		font-size: 10px;
 	}
 	.container2 {
 		width: 100vw;
@@ -220,6 +235,7 @@ select {
 
 	.rowr1 {
 		width: 80%;
+		top: -435px;
 	}
 	.cardz10,
 	.cardz5,
@@ -250,11 +266,215 @@ select {
 		width: 80%;
 		height: 100px;
 		padding: 10px;
+		position: relative;
+		top: -450px;
 	}
 	.rowr3 {
-		height: 400px;
+		/* height: 400px; */
+		width: 90%;
+		position: relative;
+		top: -190px;		
+	}
+	.img {
+		width: 90%;
+		height: 200px;
+		margin-left: 5%;
+	}
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+	.maincontainer {
+		    /* flex-direction: column; */
+    /* justify-content: flex-start; */
+    /* gap: 20px; */
+    height: auto;
+	}
+	.container1, .container2 {
+		justify-content: space-evenly;
+		align-items: center;
+		width: 100vw;
+		height:100vh;
+		gap: 10px;
+	}
+
+	.cardlogotext {
+		display: none;
+	}
+	
+	.rowl2 {
 		width: 80%;
-		background-size: contain;
-		background-repeat: no-repeat;
+		height: 200px;
+		
+	}
+	select {
+		width: 180px;
+		height: 30px;
+	}
+	.rowl3,
+	.rowr2 {
+		font-size: 20px;
+		
+	}
+	.rowl4 {
+		/* flex-direction: column; */
+		/* gap: 15px; */
+		
+		width: 84%;
+	}
+	.sub1{
+		width: 40%;
+	}
+	.hoversub1{
+		font-size: 20px;
+	}
+	.sub2{
+		width: 60%;
+		font-size: 10px;
+	}
+	
+
+	.rowr1 {
+		width: 80%;
+		top: 30px;
+		
+	}
+	.cardz10,
+	.cardz5,
+	.cardz3 {
+		width: 100%;
+		font-size: 16px;
+	}
+	.cardz10 {
+		height: 100px;
+	}
+	.cardz5 {
+		height: 110px;
+		width: 90%;
+		left: 15px;
+	}
+	.cardz3 {
+		height: 120px;
+		width: 80%;
+		left: 30px;
+	}
+
+	.cardz10 > div {
+		font-size: 15px;
+		width: 50px;
+		height: 50px;
+	}
+	.rowr2 {
+		width: 80%;
+		height: 100px;
+		padding: 10px;
+		
+	}
+	.rowr3 {
+		/* height: 400px; */
+		width: 90%;
+			
+	}
+	.img {
+		width: 90%;
+		height: 200px;
+		margin-left: 5%;
+	}
+}
+@media screen and (min-width: 601px) and (max-width: 700px) {
+	.maincontainer {
+		    /* flex-direction: column; */
+    /* justify-content: flex-start; */
+    /* gap: 20px; */
+    height: auto;
+	}
+	.container1, .container2 {
+		justify-content: space-evenly;
+		align-items: center;
+		width: 100vw;
+		height:100vh;
+		gap: 10px;
+	}
+
+	.cardlogotext {
+		display: none;
+	}
+	
+	.rowl2 {
+		width: 80%;
+		height: 200px;
+		
+	}
+	select {
+		width: 180px;
+		height: 30px;
+	}
+	.rowl3,
+	.rowr2 {
+		font-size: 15px;
+		
+	}
+	.rowl4 {
+		/* flex-direction: column; */
+		/* gap: 15px; */
+		
+		width: 84%;
+	}
+	.sub1{
+		width: 40%;
+		font-size: 20px;
+	}
+	.hoversub1{
+		font-size: 20px;
+	}
+	.sub2{
+		width: 60%;
+		font-size: 9px;
+	}
+	
+
+	.rowr1 {
+		width: 80%;
+		top: 30px;
+		
+	}
+	.cardz10,
+	.cardz5,
+	.cardz3 {
+		width: 100%;
+		font-size: 16px;
+	}
+	.cardz10 {
+		height: 100px;
+	}
+	.cardz5 {
+		height: 110px;
+		width: 90%;
+		left: 15px;
+	}
+	.cardz3 {
+		height: 120px;
+		width: 80%;
+		left: 30px;
+	}
+
+	.cardz10 > div {
+		font-size: 15px;
+		width: 50px;
+		height: 50px;
+	}
+	.rowr2 {
+		width: 80%;
+		height: 100px;
+		padding: 10px;
+		
+	}
+	.rowr3 {
+		/* height: 400px; */
+		width: 90%;
+			
+	}
+	.img {
+		width: 90%;
+		height: 200px;
+		margin-left: 5%;
 	}
 }

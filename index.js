@@ -1,23 +1,23 @@
 function time() {
-	let newTime = new Date();
-	let hrs = newTime.getHours();
-	let mins = newTime.getMinutes();
-	let secs = newTime.getSeconds();
-	let ampm = 'AM';
-	if (hrs == 24) {
-		hrs = 00;
-	} else if (hrs > 12) {
-		hrs = hrs - 12;
-		ampm = 'PM';
-	} else if (hrs == 12) {
-		ampm = 'PM';
-	}
-	setTime(hrs, mins, secs, ampm);
-	setInterval(() => {
-		time();
+ 	let newTime = new Date();
+ 	let hrs = newTime.getHours();
+ 	let mins = newTime.getMinutes();
+ 	let secs = newTime.getSeconds();
+ 	let ampm = 'AM';
+ 	if (hrs == 24) {
+ 		hrs = 00;
+ 	} else if (hrs > 12) {
+	hrs = hrs - 12;
+ 		ampm = 'PM';
+ 	} else if (hrs == 12) {
+ 		ampm = 'PM';
+ 	}
+ 	setTime(hrs, mins, secs, ampm);
+ 	setInterval(() => {
+ 		time();
 	}, 1000);
 }
-time();
+//time();
 
 function setTime(hrs, mins, secs, ampm) {
 	let hours = document.querySelector('.img1');
@@ -64,18 +64,18 @@ document.querySelector('.sub1').addEventListener('click', () => {
 	).innerHTML = `Night Time : ${option[time4].innerText}`;
 
 	let presentTime = new Date();
-
+	
 	if (
 		presentTime.getHours() === parseInt(option[time1].value) &&
 		parseInt(option[time1].value) < 12 &&
-		parseInt(option[time1].value) > 5
+		parseInt(option[time1].value) >= 5
 	) {
 		document.querySelector('.rowl3').innerHTML = `GOOD MORNING!! WAKE UP !!`;
 		document.querySelector('.img').src = `./Component 30 – 1.svg`;
 	} else if (
 		presentTime.getHours() === parseInt(option[time2].value) &&
 		parseInt(option[time2].value) < 16 &&
-		parseInt(option[time2].value) > 12
+		parseInt(option[time2].value) >= 12
 	) {
 		document.querySelector(
 			'.rowl3'
@@ -84,16 +84,15 @@ document.querySelector('.sub1').addEventListener('click', () => {
 	} else if (
 		presentTime.getHours() === parseInt(option[time3].value) &&
 		parseInt(option[time3].value) < 20 &&
-		parseInt(option[time3].value) > 16
+		parseInt(option[time3].value) >= 16
 	) {
 		document.querySelector('.rowl3').innerHTML = `GOOD EVENING !!`;
 		document.querySelector('.img').src = `./lunch_image.png`;
 	} else if (
-		(presentTime.getHours() === parseInt(option[time4].value) &&
-			parseInt(option[time2].value < 5)) ||
-		parseInt(option[time2].value > 20)
+		presentTime.getHours() === parseInt(option[time4].value)
 	) {
 		document.querySelector('.rowl3').innerHTML = `GOOD NIGHT !!`;
 		document.querySelector('.img').src = `./Component 32 – 1.svg`;
 	}
+	
 });
