@@ -36,7 +36,7 @@ function setTime(hrs, mins, secs, ampm) {
 
 	if (hrs >= 10 && hrs < 12 && ampm == 'AM')
 		row2Text.innerText = `GRAB SOME HEALTHY BREAKFAST!!!`;
-	else if (hrs >= 12 && hrs < 4 && ampm == 'PM')
+	else if (hrs >= 12 || hrs < 4 && ampm == 'PM')
 		row2Text.innerText = `LET'S HAVE SOME LUNCH !!`;
 	else if (hrs >= 4 && hrs < 8 && ampm == 'PM')
 		row2Text.innerText = `STOP YAWNING, GET SOME TEA.. ITS JUST EVENING!`;
@@ -66,25 +66,19 @@ document.querySelector('.sub1').addEventListener('click', () => {
 	let presentTime = new Date();
 	
 	if (
-		presentTime.getHours() === parseInt(option[time1].value) &&
-		parseInt(option[time1].value) < 12 &&
-		parseInt(option[time1].value) >= 5
+		presentTime.getHours() === parseInt(option[time1].value) 
 	) {
 		document.querySelector('.rowl3').innerHTML = `GOOD MORNING!! WAKE UP !!`;
 		document.querySelector('.img').src = `./Component 30 – 1.svg`;
 	} else if (
-		presentTime.getHours() === parseInt(option[time2].value) &&
-		parseInt(option[time2].value) < 16 &&
-		parseInt(option[time2].value) >= 12
+		presentTime.getHours() === parseInt(option[time2].value) 
 	) {
 		document.querySelector(
 			'.rowl3'
 		).innerHTML = `GOOD AFTERNOON !! TAKE SOME SLEEP`;
 		document.querySelector('.img').src = `./Component 31 – 1.svg`;
 	} else if (
-		presentTime.getHours() === parseInt(option[time3].value) &&
-		parseInt(option[time3].value) < 20 &&
-		parseInt(option[time3].value) >= 16
+		presentTime.getHours() === parseInt(option[time3].value) 
 	) {
 		document.querySelector('.rowl3').innerHTML = `GOOD EVENING !!`;
 		document.querySelector('.img').src = `./lunch_image.png`;
